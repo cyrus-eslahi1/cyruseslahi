@@ -51,22 +51,27 @@ hr {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 35px;
+  grid-template-columns: repeat(3, minmax(0, 300px));
+  gap: 100px;
+  justify-content: center;
+  align-items: start;
   margin-top: 30px;
 }
 
 .card {
     background-color: white;
-    border: 2px solid #d4d4d4;
-    border-radius: 20px;
+    border: 2px solid #000000;
+    border-radius: 9px;
     padding: 18px;
-    box-shadow: 0 5px 8px rgba(0,0,0, 0.18);
+    box-shadow: 0 6px 2px rgba(0, 0, 0, 0.726);
+    width: 300px;
+    height: 450px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.28);
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.808);
     transition: all 0.2s ease;
 }
 
@@ -140,6 +145,7 @@ hr {
   color: #2600ff;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease, opacity 0.2s ease;
+  text-align: center;
 }
 
 .read-more:hover {
