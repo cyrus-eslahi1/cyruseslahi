@@ -1,52 +1,109 @@
-<html>
-    <head>
-        <title>Cyrus Eslahi</title> <!--The title of my website-->
-        <meta charset="UTF-8">
-        <link rel="icon" type="image/png" href="favicon.png"> <!--My website logo-->
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professional Websites for Small Businesses | Custom Website Packages</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-    </head>
+    <!-- Hero Section -->
+    <section class="hero store-hero">
+        <h1 class="title">Professional Websites for Small Businesses</h1>
+        <p class="subtitle">Choose a package, tell us about your business, and get a modern website built for you. No technical skills needed.</p>
+        <a href="#packages" class="cta-btn">View Website Packages</a>
+    </section>
 
-  <body>
-    
-    <div class="hero">
-      <h1 class="title">Cyrus Eslahi</h1>
-      <p class="subtitle">developer · Builder · Student</p>
-    </div>
-    
-    <div class="cards">
-      <div class="card">
-        <img src="aboutme.JPEG" alt="about me" class="card-img">
-    
-        <h3 class="card-title">About Me:</h3> <!--About Me Card-->
-        <ul class="card-text">
-          <li>Im 14 years old.</li>
-          <li>I enjoy programming.</li>
-          <li>I love building things.</li>
-          <li>I like sport cars. <i>(Ferrari's mostly)</i></li>
-        </ul>
-      </div>
+    <!-- Website Packages Section -->
+    <section id="packages" class="section packages-section">
+        <h2 class="section-title">Website Packages</h2>
+        <p class="section-subtitle">Pick the size that fits your business. Every package includes a clean, modern design and mobile-friendly layout.</p>
+        <div class="packages-grid">
+            <article class="package-card">
+                <div class="package-card-badge">Popular for starters</div>
+                <h3 class="package-name">Small Website</h3>
+                <ul class="package-features">
+                    <li>Up to 3 pages</li>
+                    <li>Simple and clean design</li>
+                    <li>Best for small / local businesses</li>
+                </ul>
+                <p class="package-price">$100 – $450</p>
+                <a href="examples/index.html#small" class="package-btn">View Examples</a>
+            </article>
+            <article class="package-card package-card-featured">
+                <div class="package-card-badge">Most chosen</div>
+                <h3 class="package-name">Medium Website</h3>
+                <ul class="package-features">
+                    <li>Up to 6 pages</li>
+                    <li>More polished design</li>
+                    <li>Good for growing businesses</li>
+                </ul>
+                <p class="package-price">$450 – $800</p>
+                <a href="examples/index.html#medium" class="package-btn">View Examples</a>
+            </article>
+            <article class="package-card">
+                <div class="package-card-badge">Full presence</div>
+                <h3 class="package-name">Big Website</h3>
+                <ul class="package-features">
+                    <li>Up to 10 pages</li>
+                    <li>High-end design</li>
+                    <li>Best for serious businesses</li>
+                </ul>
+                <p class="package-price">$800 – $2,000</p>
+                <a href="examples/index.html#big" class="package-btn">View Examples</a>
+            </article>
+        </div>
+    </section>
 
-      <div class="card"> <!--Backstory Card-->
-        <img src="backstory.JPEG" alt="my backstory" class="card-img">
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section how-section">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <span class="step-number">1</span>
+                <h3 class="step-title">Choose a website package</h3>
+                <p class="step-text">Pick Small, Medium, or Big based on your needs and budget.</p>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                <h3 class="step-title">Send an email with your details</h3>
+                <p class="step-text">Tell us your business name, type, and which pages you need.</p>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                <h3 class="step-title">Website gets built and delivered</h3>
+                <p class="step-text">We build your site and hand it over ready to go live.</p>
+            </div>
+        </div>
+    </section>
 
-        <h3 class="card-title">My Backstory:</h3>
-        <p class="card-text">
-          I've always loved coding and building things since I was 7. I've built drones, a cardboard soda dispenser (<i>It actually works!)</i> and I've done <a href="scratch.mit.edu/users/cyrus-dev">Scratch</a> for years but moved onto Python around 2 years ago. Last summer I started doing <a href="roblox.com/">Roblox</a> Game Development... <a href="backstory.html" class="read-more">Read more here →</a></p> 
-        </p>
-      </div>
+    <!-- Contact / Order Section -->
+    <section id="contact" class="section contact-section">
+        <h2 class="section-title">Request Your Website</h2>
+        <p class="section-subtitle">Ready to get started? Send us your details and we’ll get back to you.</p>
+        <div class="contact-box">
+            <p class="contact-instructions">In your email, please include:</p>
+            <ul class="contact-fields">
+                <li>Business name</li>
+                <li>Type of business</li>
+                <li>Package you’re interested in (Small / Medium / Big)</li>
+                <li>Pages or features you need</li>
+            </ul>
+            <!-- Replace your@email.com with your real email -->
+            <a href="mailto:contact@cyruseslahi.com?subject=Website%20Request&body=Business%20name%3A%20%0D%0AType%20of%20business%3A%20%0D%0APackage%20interested%20in%20(Small%2FMedium%2FBig)%3A%20%0D%0APages%2Ffeatures%20needed%3A%20" class="cta-btn cta-btn-primary">Request Website</a>
+        </div>
+    </section>
 
-    <div class="card">
-      <img src="projects.JPEG" alt="projects" class="card-img">
+    <footer class="site-footer">
+        <hr>
+        <p class="copyright">© <span id="year"></span> · Professional websites for small businesses</p>
+    </footer>
 
-      <h3 class="card-title">My Projects:</h3>
-      <p class="card-text">
-        Im currently working on a project that turns off your light when you clap.
-        <br>
-        <br>
-        <a href="devlogs.html" class="dev-logs">Dev Logs here →</a></p> 
-      </p>
-    </div>
-  </body>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
 </html>
