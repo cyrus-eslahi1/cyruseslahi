@@ -225,7 +225,7 @@ hr {
     inset: 0;
     mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
-    opacity: 0.8;
+    opacity: 0.95;
     pointer-events: none;
 }
 
