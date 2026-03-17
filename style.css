@@ -549,3 +549,108 @@ hr {
     opacity: 0.8;
     text-decoration: underline;
 }
+
+/* ========== Coupon / Promo Landing Page ========== */
+
+.coupon-hero {
+    padding: 60px 23px 50px;
+}
+.coupon-price {
+    display: inline-block;
+    color: #000;
+    font-size: 1.15em;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fff9e6 0%, #ffeaa7 100%);
+    padding: 4px 14px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    letter-spacing: -0.5px;
+}
+.coupon-hero-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 28px;
+    max-width: 420px;
+    text-align: left;
+}
+.coupon-hero-list li {
+    padding: 8px 0;
+    padding-left: 26px;
+    position: relative;
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.5;
+}
+.coupon-hero-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    color: #000;
+}
+.coupon-claim-cta {
+    text-align: center;
+    margin-top: 32px;
+}
+.coupon-features-section {
+    padding-top: 20px;
+}
+.coupon-features-card {
+    max-width: 480px;
+    margin: 0 auto;
+    background: white;
+    border: 2px solid #000;
+    border-radius: 12px;
+    padding: 32px 28px;
+    box-shadow: 0 6px 2px rgba(0, 0, 0, 0.1);
+}
+.coupon-features-list {
+    margin: 0;
+}
+.coupon-features-list li {
+    font-size: 1rem;
+}
+.coupon-urgency-section {
+    padding-bottom: 60px;
+}
+.coupon-urgency-box {
+    max-width: 520px;
+    margin: 0 auto;
+    background: white;
+    border: 2px solid #000;
+    border-radius: 12px;
+    padding: 36px 32px;
+    box-shadow: 0 6px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.coupon-urgency-title {
+    margin-bottom: 12px;
+}
+.coupon-urgency-text {
+    color: #555;
+    font-size: 1.05rem;
+    margin: 0 0 24px;
+    line-height: 1.6;
+}
+.footer-home-link {
+    color: #2600ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.footer-home-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .coupon-hero .title {
+        font-size: 1.85rem;
+    }
+    .coupon-price {
+        font-size: 1.05em;
+        padding: 2px 10px;
+    }
+    .coupon-urgency-box {
+        padding: 28px 24px;
+    }
+}
