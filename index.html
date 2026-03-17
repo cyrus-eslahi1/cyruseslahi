@@ -15,17 +15,23 @@
         <div class="hero-bg" aria-hidden="true">
             <span class="hero-bg-blur hero-bg-blur-1"></span>
             <span class="hero-bg-blur hero-bg-blur-2"></span>
-            <span class="hero-bg-grid"></span>
+            <span class="hero-bg-blur hero-bg-blur-3"></span>
+            <span class="hero-bg-grid">
+                <canvas id="hero-grid-canvas"></canvas>
+            </span>
         </div>
         <div class="hero-inner animate-fade-up">
             <h1 class="title">Professional Websites for Small Businesses</h1>
             <p class="subtitle">Choose a package, tell us about your business, and get a modern website built for you. No technical skills needed.</p>
             <a href="#packages" class="cta-btn cta-btn-hero">View Website Packages</a>
         </div>
+        <a href="#packages" class="hero-scroll-indicator" aria-label="Scroll to packages">
+            <span class="hero-scroll-chevron"></span>
+        </a>
     </section>
 
     <!-- Website Packages Section -->
-    <section id="packages" class="section section-tint packages-section section-reveal">
+    <section id="packages" class="section packages-section section-reveal">
         <div class="section-inner">
             <h2 class="section-title">Website Packages</h2>
             <p class="section-subtitle">Pick the size that fits your business. Every package includes a clean, modern design and mobile-friendly layout.</p>
@@ -92,7 +98,7 @@
     </section>
 
     <!-- Contact / Order Section -->
-    <section id="contact" class="section section-tint contact-section section-reveal">
+    <section id="contact" class="section contact-section section-reveal">
         <div class="section-inner">
             <h2 class="section-title">Request Your Website</h2>
             <p class="section-subtitle">Ready to get started? Send us your details and we’ll get back to you.</p>
@@ -130,6 +136,114 @@
             document.querySelectorAll('.section-reveal').forEach(function (el) {
                 observer.observe(el);
             });
+        })();
+
+        // Hero interactive grid (desktop pointer devices only)
+        (function () {
+            var hero = document.querySelector('.hero-premium');
+            var canvas = document.getElementById('hero-grid-canvas');
+            if (!hero || !canvas) return;
+
+            // Disable on non-pointer or small screens
+            var supportsFinePointer = window.matchMedia && window.matchMedia('(pointer: fine)').matches;
+            if (!supportsFinePointer || window.innerWidth < 768) {
+                return;
+            }
+
+            var ctx = canvas.getContext('2d');
+            var dpr = window.devicePixelRatio || 1;
+            var points = [];
+            var spacing = 34; // logical spacing in CSS pixels
+            var dotRadius = 1.3;
+            var baseAlpha = 0.14;
+            var activeRadius = 260;
+            var repelStrength = 14;
+            var mouse = { x: 0, y: 0, active: false };
+
+            function resize() {
+                var rect = hero.getBoundingClientRect();
+                var width = rect.width;
+                var height = rect.height;
+                canvas.width = width * dpr;
+                canvas.height = height * dpr;
+                canvas.style.width = width + 'px';
+                canvas.style.height = height + 'px';
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+                points = [];
+                var offsetX = (width % spacing) / 2;
+                var offsetY = (height % spacing) / 2;
+                for (var y = offsetY; y <= height; y += spacing) {
+                    for (var x = offsetX; x <= width; x += spacing) {
+                        points.push({
+                            x: x,
+                            y: y,
+                            offsetX: 0,
+                            offsetY: 0,
+                            alphaBoost: 0
+                        });
+                    }
+                }
+            }
+
+            function onMouseMove(e) {
+                var rect = canvas.getBoundingClientRect();
+                mouse.x = e.clientX - rect.left;
+                mouse.y = e.clientY - rect.top;
+                mouse.active = true;
+            }
+
+            function onMouseLeave() {
+                mouse.active = false;
+            }
+
+            hero.addEventListener('mousemove', onMouseMove);
+            hero.addEventListener('mouseleave', onMouseLeave);
+            window.addEventListener('resize', resize);
+
+            resize();
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width / dpr, canvas.height / dpr);
+                var falloff = activeRadius;
+
+                for (var i = 0; i < points.length; i++) {
+                    var p = points[i];
+                    var targetOffsetX = 0;
+                    var targetOffsetY = 0;
+                    var targetBoost = 0;
+
+                    if (mouse.active) {
+                        var dx = p.x - mouse.x;
+                        var dy = p.y - mouse.y;
+                        var dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < falloff && dist > 0.001) {
+                            var force = (falloff - dist) / falloff; // 0 → 1
+                            var angle = Math.atan2(dy, dx);
+                            var strength = repelStrength * force;
+                            targetOffsetX = Math.cos(angle) * strength;
+                            targetOffsetY = Math.sin(angle) * strength;
+                            // Slightly stronger darkening near cursor
+                            targetBoost = 0.44 * force;
+                        }
+                    }
+
+                    // Smooth interpolation towards target
+                    p.offsetX += (targetOffsetX - p.offsetX) * 0.14;
+                    p.offsetY += (targetOffsetY - p.offsetY) * 0.14;
+                    p.alphaBoost += (targetBoost - p.alphaBoost) * 0.1;
+
+                    var alpha = baseAlpha + p.alphaBoost;
+                    ctx.beginPath();
+                    ctx.arc(p.x + p.offsetX, p.y + p.offsetY, dotRadius, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(0, 0, 0,' + alpha.toFixed(3) + ')';
+                    ctx.fill();
+                }
+
+                requestAnimationFrame(animate);
+            }
+
+            requestAnimationFrame(animate);
         })();
     </script>
 </body>
