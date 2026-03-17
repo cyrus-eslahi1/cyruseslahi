@@ -11,89 +11,101 @@
 <body>
 
     <!-- Hero Section -->
-    <section class="hero store-hero">
-        <h1 class="title">Professional Websites for Small Businesses</h1>
-        <p class="subtitle">Choose a package, tell us about your business, and get a modern website built for you. No technical skills needed.</p>
-        <a href="#packages" class="cta-btn">View Website Packages</a>
+    <section class="hero store-hero hero-premium">
+        <div class="hero-bg" aria-hidden="true">
+            <span class="hero-bg-blur hero-bg-blur-1"></span>
+            <span class="hero-bg-blur hero-bg-blur-2"></span>
+            <span class="hero-bg-grid"></span>
+        </div>
+        <div class="hero-inner animate-fade-up">
+            <h1 class="title">Professional Websites for Small Businesses</h1>
+            <p class="subtitle">Choose a package, tell us about your business, and get a modern website built for you. No technical skills needed.</p>
+            <a href="#packages" class="cta-btn cta-btn-hero">View Website Packages</a>
+        </div>
     </section>
 
     <!-- Website Packages Section -->
-    <section id="packages" class="section packages-section">
-        <h2 class="section-title">Website Packages</h2>
-        <p class="section-subtitle">Pick the size that fits your business. Every package includes a clean, modern design and mobile-friendly layout.</p>
-        <div class="packages-grid">
-            <article class="package-card">
-                <div class="package-card-badge">Popular for starters</div>
-                <h3 class="package-name">Small Website</h3>
-                <ul class="package-features">
-                    <li>Up to 3 pages</li>
-                    <li>Simple and clean design</li>
-                    <li>Best for small / local businesses</li>
-                </ul>
-                <p class="package-price">$100 – $450</p>
-                <a href="examples/index.html#small" class="package-btn">View Examples</a>
-            </article>
-            <article class="package-card package-card-featured">
-                <div class="package-card-badge">Most chosen</div>
-                <h3 class="package-name">Medium Website</h3>
-                <ul class="package-features">
-                    <li>Up to 6 pages</li>
-                    <li>More polished design</li>
-                    <li>Good for growing businesses</li>
-                </ul>
-                <p class="package-price">$450 – $800</p>
-                <a href="examples/index.html#medium" class="package-btn">View Examples</a>
-            </article>
-            <article class="package-card">
-                <div class="package-card-badge">Full presence</div>
-                <h3 class="package-name">Big Website</h3>
-                <ul class="package-features">
-                    <li>Up to 10 pages</li>
-                    <li>High-end design</li>
-                    <li>Best for serious businesses</li>
-                </ul>
-                <p class="package-price">$800 – $2,000</p>
-                <a href="examples/index.html#big" class="package-btn">View Examples</a>
-            </article>
+    <section id="packages" class="section section-tint packages-section section-reveal">
+        <div class="section-inner">
+            <h2 class="section-title">Website Packages</h2>
+            <p class="section-subtitle">Pick the size that fits your business. Every package includes a clean, modern design and mobile-friendly layout.</p>
+            <div class="packages-grid">
+                <article class="package-card card-reveal" style="--reveal-order: 0">
+                    <div class="package-card-badge">Popular for starters</div>
+                    <h3 class="package-name">Small Website</h3>
+                    <ul class="package-features">
+                        <li>Up to 3 pages</li>
+                        <li>Simple and clean design</li>
+                        <li>Best for small / local businesses</li>
+                    </ul>
+                    <p class="package-price">$100 – $450</p>
+                    <a href="examples/index.html#small" class="package-btn">View Examples</a>
+                </article>
+                <article class="package-card package-card-featured card-reveal" style="--reveal-order: 1">
+                    <div class="package-card-badge">Most chosen</div>
+                    <h3 class="package-name">Medium Website</h3>
+                    <ul class="package-features">
+                        <li>Up to 6 pages</li>
+                        <li>More polished design</li>
+                        <li>Good for growing businesses</li>
+                    </ul>
+                    <p class="package-price">$450 – $800</p>
+                    <a href="examples/index.html#medium" class="package-btn">View Examples</a>
+                </article>
+                <article class="package-card card-reveal" style="--reveal-order: 2">
+                    <div class="package-card-badge">Full presence</div>
+                    <h3 class="package-name">Big Website</h3>
+                    <ul class="package-features">
+                        <li>Up to 10 pages</li>
+                        <li>High-end design</li>
+                        <li>Best for serious businesses</li>
+                    </ul>
+                    <p class="package-price">$800 – $2,000</p>
+                    <a href="examples/index.html#big" class="package-btn">View Examples</a>
+                </article>
+            </div>
         </div>
     </section>
 
     <!-- How It Works Section -->
-    <section id="how-it-works" class="section how-section">
-        <h2 class="section-title">How It Works</h2>
-        <div class="steps">
-            <div class="step">
-                <span class="step-number">1</span>
-                <h3 class="step-title">Choose a website package</h3>
-                <p class="step-text">Pick Small, Medium, or Big based on your needs and budget.</p>
-            </div>
-            <div class="step">
-                <span class="step-number">2</span>
-                <h3 class="step-title">Send an email with your details</h3>
-                <p class="step-text">Tell us your business name, type, and which pages you need.</p>
-            </div>
-            <div class="step">
-                <span class="step-number">3</span>
-                <h3 class="step-title">Website gets built and delivered</h3>
-                <p class="step-text">We build your site and hand it over ready to go live.</p>
+    <section id="how-it-works" class="section how-section section-reveal">
+        <div class="section-inner">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step card-reveal" style="--reveal-order: 0">
+                    <span class="step-number">1</span>
+                    <h3 class="step-title">Choose a website package</h3>
+                    <p class="step-text">Pick Small, Medium, or Big based on your needs and budget.</p>
+                </div>
+                <div class="step card-reveal" style="--reveal-order: 1">
+                    <span class="step-number">2</span>
+                    <h3 class="step-title">Send an email with your details</h3>
+                    <p class="step-text">Tell us your business name, type, and which pages you need.</p>
+                </div>
+                <div class="step card-reveal" style="--reveal-order: 2">
+                    <span class="step-number">3</span>
+                    <h3 class="step-title">Website gets built and delivered</h3>
+                    <p class="step-text">We build your site and hand it over ready to go live.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact / Order Section -->
-    <section id="contact" class="section contact-section">
-        <h2 class="section-title">Request Your Website</h2>
-        <p class="section-subtitle">Ready to get started? Send us your details and we’ll get back to you.</p>
-        <div class="contact-box">
-            <p class="contact-instructions">In your email, please include:</p>
-            <ul class="contact-fields">
-                <li>Business name</li>
-                <li>Type of business</li>
-                <li>Package you’re interested in (Small / Medium / Big)</li>
-                <li>Pages or features you need</li>
-            </ul>
-            <!-- Replace your@email.com with your real email -->
-            <a href="mailto:contact@cyruseslahi.com?subject=Website%20Request&body=Business%20name%3A%20%0D%0AType%20of%20business%3A%20%0D%0APackage%20interested%20in%20(Small%2FMedium%2FBig)%3A%20%0D%0APages%2Ffeatures%20needed%3A%20" class="cta-btn cta-btn-primary">Request Website</a>
+    <section id="contact" class="section section-tint contact-section section-reveal">
+        <div class="section-inner">
+            <h2 class="section-title">Request Your Website</h2>
+            <p class="section-subtitle">Ready to get started? Send us your details and we’ll get back to you.</p>
+            <div class="contact-box card-reveal">
+                <p class="contact-instructions">In your email, please include:</p>
+                <ul class="contact-fields">
+                    <li>Business name</li>
+                    <li>Type of business</li>
+                    <li>Package you’re interested in (Small / Medium / Big)</li>
+                    <li>Pages or features you need</li>
+                </ul>
+                <a href="mailto:contact@cyruseslahi.com?subject=Website%20Request&body=Business%20name%3A%20%0D%0AType%20of%20business%3A%20%0D%0APackage%20interested%20in%20(Small%2FMedium%2FBig)%3A%20%0D%0APages%2Ffeatures%20needed%3A%20" class="cta-btn cta-btn-primary">Request Website</a>
+            </div>
         </div>
     </section>
 
@@ -104,6 +116,21 @@
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll-triggered reveal animations
+        (function () {
+            var observerOptions = { root: null, rootMargin: '0px 0px -8% 0px', threshold: 0 };
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, observerOptions);
+            document.querySelectorAll('.section-reveal').forEach(function (el) {
+                observer.observe(el);
+            });
+        })();
     </script>
 </body>
 </html>
